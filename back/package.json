@@ -4,7 +4,7 @@
   "description": "IzCount API",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon -L",
+    "start": "nodemon -L",
     "test": "test"
   },
   "author": "Santaran Brian",

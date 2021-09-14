@@ -25,6 +25,10 @@ module.exports = (sequelize) => {
         type: DataTypes.FLOAT,
         allowNull: true,
       },
+      description: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
     },
   );
 };
