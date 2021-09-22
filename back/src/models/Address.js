@@ -37,6 +37,14 @@ module.exports = (sequelize) => {
                 type: DataTypes.STRING,
                 allowNull: true,
             },
+            active: {
+                type:DataTypes.BOOLEAN,
+                defaultValue: false
+            },
+            office: {
+                type: DataTypes.BOOLEAN,
+                defaultValue: false 
+            }
         },
     );
 };
