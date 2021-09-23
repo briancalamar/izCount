@@ -24,7 +24,7 @@ const getUserById = async (req, res) => {
         return res.json(user);
 
     } catch (error) {
-        console.log(error, )
+        return res.json({status: "error al traer usuario por ID", error})
     }
 }
 

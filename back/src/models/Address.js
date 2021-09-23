@@ -43,7 +43,7 @@ module.exports = (sequelize) => {
             },
             office: {
                 type: DataTypes.BOOLEAN,
-                defaultValue: false 
+                defaultValue: true 
             }
         },
     );

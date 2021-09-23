@@ -17,8 +17,8 @@ const findProduct = async (req, res) => {
                             name: { [Op.iLike]: `%${name}%` },
                         },
                         {
-                            alias: { [Op.iLike]: `%${alias}%` },
-                        }
+                            alias: { [Op.iLike]: `%${name}%` },
+                        },
                     ]
                 },
                 include: [{

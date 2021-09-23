@@ -17,7 +17,7 @@ const findUser = async (req, res) => {
                         },
                         {
                             lastname: { [Op.iLike]: `%${name}%` },
-                        }
+                        },
                     ]
                 },
             })

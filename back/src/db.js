@@ -69,8 +69,11 @@ Payment.belongsTo(Order);
 User.hasMany(Order);
 Order.belongsTo(User);
 
-Address.hasMany(User)
-User.belongsTo(Address)
+User.hasOne(Address)
+Address.belongsTo(User)
+
+Order.hasOne(Address)
+Address.belongsTo(Order)
 
 module.exports = {
   ...sequelize.models,
