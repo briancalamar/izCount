@@ -10,7 +10,7 @@ module.exports = (sequelize) => {
         defaultValue: DataTypes.UUIDV4,
       },
       orderState: {
-        type: DataTypes.ENUM("PENDIENTE", "CANCELED", "COMPLETADA"),
+        type: DataTypes.ENUM("PENDIENTE", "CANCELED", "FINALIZADA"),
         defaultValue: "PENDIENTE",
         allowNull: true,
       },
@@ -24,7 +24,7 @@ module.exports = (sequelize) => {
       },
       type: {
         type: DataTypes.ENUM("COMPRA", "VENTA", "GASTO", "OTRO"),
-        defaultValue: "COMPRA"
+        defaultValue: "VENTA"
       },
     },
   );

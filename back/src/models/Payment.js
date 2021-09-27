@@ -8,6 +8,10 @@ module.exports = (sequelize) => {
         type: DataTypes.FLOAT,
         allowNull: false,
       },
+      proof: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      }
     },
   );
 };
