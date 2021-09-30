@@ -1,31 +1,23 @@
-const { User, Order, Address } = require('../../db')
+const { Order, Product, Address } = require('../../db')
 
-const getUserById = async (req, res) => {
+const getOrderById = async (req, res) => {
 
     try {
         const { id } = req.params;
 
-        const user = await User.findOne({
+        const order = await Order.findOne({
             where: {
                 id,
             },
-            include: [
-                {
-                    model: Order,
-                    // attributes: ["name", "id"],
-                },
-                {
-                    model: Address,
-                    // attributes: ["name", "id"],
-                }
+            include: [{ model: Product }, { model: Address }
             ]
         })
 
-        return res.json(user);
+        return res.json(order);
 
     } catch (error) {
-        return res.json({status: "error al traer usuario por ID", error})
+        return res.json({ status: "error al traer orden por ID", error })
     }
 }
 
-module.exports = getUserById;
+module.exports = getOrderById;

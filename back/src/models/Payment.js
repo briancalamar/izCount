@@ -4,7 +4,7 @@ module.exports = (sequelize) => {
   sequelize.define(
     "payment",
     {
-      monto: {
+      amount: {
         type: DataTypes.FLOAT,
         allowNull: false,
       },

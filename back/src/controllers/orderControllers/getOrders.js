@@ -1,17 +1,18 @@
-const { Order_Product, Order, Address, User } = require('../../db')
+const { Order_Product, Order, Address, User, Product } = require('../../db')
 
 const getOrders = async (req, res) => {
 
     try {
         const orders = await Order.findAll({
-            // include: [{
-            //     model: Order_Product
-            // }]
+            include: [{
+                model: Product,
+            }]
         });
 
         return res.json(orders);
 
     } catch (error) {
+        console.log(error)
         return res.json(error)
     }
 }
