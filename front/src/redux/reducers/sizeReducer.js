@@ -4,7 +4,7 @@ const initialState = {
     sizes: null,
 }
 
-export default sizeReducer = (state = initialState, action) => {
+export default function sizeReducer(state = initialState, action) {
     switch (action.name) {
         case GET_SIZES: return { ...state, sizes: action.payload }
 

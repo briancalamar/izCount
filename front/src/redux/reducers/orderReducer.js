@@ -5,7 +5,7 @@ const initialState = {
     orderDetail: null,
 }
 
-export default orderReducer = (state = initialState, action) => {
+export default function orderReducer(state = initialState, action){
     switch (action.name) {
         case GET_ORDERS: return { ...state, orders: action.payload }
 
