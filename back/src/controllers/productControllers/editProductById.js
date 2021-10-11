@@ -45,10 +45,10 @@ const editProductById = async (req, res) => {
             }]
         });
 
-        return res.json(product);
+        return res.status(223).json(product);
 
     } catch (error) {
-        return res.json({status: "error en editar el producto", error})
+        return res.status(426).json({error})
     }
 }
 

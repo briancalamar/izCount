@@ -5,8 +5,10 @@ const editPriceProducts = async (req, res) => {
     try {
         const { pourcentage ,price, productsId } = req.body;
 
-        if(!productsId || !productsId?.length) return res.json({error: "Debe enviar al menos un producto"});
-        if(!pourcentage && !price) return res.json({error: "ingrese un monto"});
+        //"Debe enviar al menos un producto"
+        if(!productsId || !productsId?.length) return res.sendStatus(423);
+        //"ingrese un monto"
+        if(!pourcentage && !price) return res.sendStatus(424);
 
         productsId.forEach( async id => {
             let product = await Product.findByPk(id);
@@ -24,11 +26,13 @@ const editPriceProducts = async (req, res) => {
             }
         })
 
-        return res.json({status: "Productos actualizados exitosamente"});
+        //"Productos actualizados exitosamente"
+        return res.sendStatus(222);
 
 
     } catch (error) {
-        return res.json({ status: "Uno o mas productos tuvieron un error", error});
+        //"Uno o mas productos tuvieron un error"
+        return res.status(425).json({error});
     }
 }
 

@@ -5,21 +5,22 @@ const { Product, Category, Size } = require('../../db')
 const createProduct = async (req, res) => {
 
     const body = req.body;
-    if (!body.name) return res.send("Debe ingresar al menos un nombre");
-
+    if (!body.name) return res.sendStatus(420);
+    // if (typeof(body.price) !== "number" || body.price < 0 ) return res.sendStatus(421);
     //Size y category vienen en array [[nombre, id], [nombre, id]]
     //Si el id no es proporcionado, hay que crear.
     const { name, alias, image, price, description, size, category } = req.body;
 
     try {
 
-        const [product] = await Product.findOrCreate({
+        const [product, created] = await Product.findOrCreate({
             where: {
                 name,
             },
             defaults: { alias, price, description, image },
         });
 
+        if(!created) return res.sendStatus(421);
         if (size?.length) {
 
             size.map(async s => {
@@ -43,10 +44,10 @@ const createProduct = async (req, res) => {
                 product.addCategory(categoryCreated);
             });
         }
-        return res.json(product)
+        return res.status(220).json(product)
 
     } catch (error) {
-        return res.json({ error })
+        return res.status(422).json({ error })
     }
 }
 

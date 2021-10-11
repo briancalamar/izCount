@@ -21,10 +21,10 @@ const getProductById = async (req, res) => {
             ]
         })
 
-        return res.json(product);
+        return res.status(225).json(product);
 
     } catch (error) {
-        console.log(error)
+        return res.status(428).json({error})
     }
 }
 

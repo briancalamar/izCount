@@ -55,10 +55,10 @@ const findProduct = async (req, res) => {
             })
         }
 
-        return res.json(products);
+        return res.status(224).json(products);
 
     } catch (error) {
-        return res.json(error);
+        return res.status(427).json(error);
     }
 }
 

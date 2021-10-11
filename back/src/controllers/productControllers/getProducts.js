@@ -14,10 +14,10 @@ const getProducts = async (req, res) => {
             }]
         });
 
-        return res.json(products);
+        return res.status(227).json(products);
 
     } catch (error) {
-        return res.json(error)
+        return res.status(429).json(error)
     }
 }
 

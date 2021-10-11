@@ -1,0 +1,17 @@
+.navbar {
+    width: 100vw;
+    height: 80px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-div-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 250ms;
+}
+.nav-div-icon:hover {
+    font-size: 1.3em;
+}
