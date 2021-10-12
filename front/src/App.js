@@ -1,10 +1,12 @@
 import './App.css';
 import NavBar from "./components/navBar";
 
+import  { Route } from "react-router"
+
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <Route path="/" component={NavBar}/>
     </div>
   );
 }

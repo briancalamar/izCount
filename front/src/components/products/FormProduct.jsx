@@ -50,7 +50,7 @@ export default function FormProduct() {
             [e.target.name]: e.target.value,
         })
     }
-
+ 
     return (
         <div>
             <form>
