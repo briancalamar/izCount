@@ -2,7 +2,8 @@
   /* --main-color: #3b9d6e; */
   --main-color: #d05ac8;
   --secondary-color: #b05de8;
-  --bg-color: #1f1d2e;
+  --primary-bg-color: #1f1d2e;
+  --secondary-bg-color: #262a3b;
   --text-color: #ffffff;
 }
 
@@ -20,7 +21,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
-  background-color: var(--bg-color);
+  background-color: var(--primary-bg-color);
   
 }
 

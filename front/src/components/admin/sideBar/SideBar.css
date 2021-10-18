@@ -1,6 +1,6 @@
 .sidebar {
     width: 250px;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 85px);
     background: rgb(208,90,200);
     background: linear-gradient(180deg, rgba(208,90,200,1) 0%, rgba(208,90,200,1) 0%, rgba(176,93,232,1) 100%); 
     /* background-color: var(--main-color); */
@@ -10,6 +10,12 @@
     transition: 850ms;
     border-radius: 10px;
     color: var(--text-color);
+}
+
+.title-sidebar{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 .side-active {

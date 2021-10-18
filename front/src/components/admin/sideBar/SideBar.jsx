@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router";
-import "./index.css"
+import "./SideBar.css"
+
+import { AiFillHome } from "react-icons/ai"
 
 export default function SideBar({ showBar, setShowBar }) {
 
@@ -8,12 +10,13 @@ export default function SideBar({ showBar, setShowBar }) {
 
     return (
         <div className={showBar ? "sidebar side-active" : "sidebar"}>
+            <h2 className="title-sidebar">CS Cactus y Suculentas</h2>
             <ul>
                 <NavLink to="/">
                     <li 
                     className={ pathname === "/" ? "sidebar-selected" : ""}
                     onClick={() => setShowBar(!showBar)}>
-                        INICIO
+                        <AiFillHome/>    INICIO
                     </li>
                 </NavLink>
                 <NavLink to="/ventas">
@@ -23,11 +26,11 @@ export default function SideBar({ showBar, setShowBar }) {
                     VENTAS
                     </li>
                 </NavLink>
-                <NavLink to="/envios">
+                <NavLink to="/gastos">
                     <li 
-                    className={ pathname === "/envios" ? "sidebar-selected" : ""}
+                    className={ pathname === "/gastos" ? "sidebar-selected" : ""}
                     onClick={() => setShowBar(!showBar)}>
-                    ENVIOS
+                    COMPRAS / GASTOS
                     </li>
                 </NavLink>
                 <NavLink to="/productos">

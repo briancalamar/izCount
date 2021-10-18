@@ -1,0 +1,45 @@
+.container-button-creator {
+    width: 100%;
+    height: 80px;
+    margin: 20px 0;
+    background-color: var(--secondary-bg-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.container-button-creator button{
+    width: 150px;
+    height: 60px;
+    color: var(--text-color);
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 250ms;
+    justify-self: flex-end;
+}
+.container-button-creator button:hover {
+    width: 147px;
+    height: 58px;
+}
+
+.container-button-creator input{
+    display: none;
+    width: 250px;
+    border-radius: 15px;
+    padding: 5px;
+    height: 50px;
+    text-align: center;
+    color: #000;
+}
+
+
+@media (min-width: 600px) {
+    .container-button-creator input{
+        display: inherit;
+    }
+  }

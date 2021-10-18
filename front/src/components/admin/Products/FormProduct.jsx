@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { createProduct } from '../../redux/actions/productActions';
+import { createProduct } from '../../../redux/actions/productActions';
 
 
 export default function FormProduct() {
