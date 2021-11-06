@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./Product.css"
 
-export default function Product({
+export default function ProductCard({
     images,
     name,
     alias,
@@ -62,9 +62,9 @@ export default function Product({
                     <p>CATEGORIAS</p>
                     <ul>
                         {
-                            categories?.forEach((category) => {
-                                <li>{category.name}</li>
-                            })
+                            categories?.map((category, i) => 
+                                <li key={i}>{category.name}</li>
+                            )
                         }
                     </ul>
                 </div>

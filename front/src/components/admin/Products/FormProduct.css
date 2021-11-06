@@ -1,0 +1,26 @@
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.inputs > input {
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 10px;
+    margin: 5px 0;
+    color: #000000;
+}
+
+.form-product {
+    background-color: var(--secondary-bg-color);
+    width: 90%;
+    min-height: 80vh;
+    padding: 15px;
+}
+
+.form-p-category {
+    border-top: solid 2px var(--main-color);
+    text-align: center;
+}

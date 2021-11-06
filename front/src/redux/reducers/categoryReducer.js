@@ -5,8 +5,8 @@ const initialState = {
 }
 
 export default function categoryReducer (state = initialState, action) {
-    switch (action.name) {
-        case GET_CATEGORIES: return { ...state, sizes: action.payload }
+    switch (action.type) {
+        case GET_CATEGORIES: return { ...state, categories: action.payload }
 
         default: return state;
     }

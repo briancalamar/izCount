@@ -1,0 +1,28 @@
+.choise-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.choise-divs-options {
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 10px;
+}
+
+.choise-buttons {
+    border-radius: 7px;
+    padding: 5px;
+    background-color: transparent;
+    border: solid 1px var(--main-color);
+    word-wrap: break-word;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.choise-selected:hover {
+    border-color: red;
+}
+.choise-add:hover {
+    border-color: green;
+}
